@@ -302,34 +302,49 @@ footer p { font-size: 0.9rem; }
 
 
 
-/* --- Mobile View Typography Fix (Updated & Smaller) --- */
+/* =========================================
+   Mobile View Typography & Buttons Fix
+========================================= */
+
 @media (max-width: 768px) {
-    /* হিরো সেকশনের মেইন টাইটেল (Best Medical & Dental...) */
+    /* ১. লেখা ছোট করার কোড */
     h1, .name-title {
         font-size: 1.8rem !important; 
         line-height: 1.3 !important;
     }
-
-    /* অন্যান্য সেকশন টাইটেল (WHY CHOOSE RENIN?, OUR PREMIUM PROGRAMS) */
     h2, .section-title {
         font-size: 1.4rem !important; 
         margin-bottom: 25px !important;
     }
-    
-    /* সাব-টাইটেল বা কার্ডের হেডিং */
     h3 {
         font-size: 1.1rem !important;
     }
-
-    /* সাধারণ প্যারাগ্রাফ টেক্সট */
     p {
         font-size: 0.9rem !important; 
         line-height: 1.5 !important;
     }
+
+    /* ২. বাটন পাশাপাশি রাখার কোড */
+    .btn-group {
+        display: flex;
+        flex-direction: row !important; /* পাশাপাশি রাখার জন্য */
+        justify-content: center;
+        gap: 10px !important; /* মাঝখানের গ্যাপ কমানো হলো */
+        width: 100%;
+    }
+    .btn {
+        flex: 1; /* দুটো বাটন সমান জায়গা নেবে */
+        padding: 10px 5px !important; /* প্যাডিং কমানো হলো */
+        font-size: 0.8rem !important; /* লেখার সাইজ ছোট করা হলো */
+        text-align: center;
+        justify-content: center;
+        white-space: normal; /* লেখা বড় হলে দুই লাইনে বসবে */
+        line-height: 1.2;
+    }
 }
 
+/* আরও ছোট স্ক্রিনের জন্য */
 @media (max-width: 480px) {
-    /* আরও ছোট স্ক্রিনের (যেমন পুরনো বা ছোট স্মার্টফোন) জন্য একদম পারফেক্ট সাইজ */
     h1, .name-title {
         font-size: 1.6rem !important;
     }
