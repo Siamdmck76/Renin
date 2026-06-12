@@ -136,6 +136,8 @@ header.sticky {
 
 .hero-image { flex: 0.8; display: flex; justify-content: center; animation: float 6s ease-in-out infinite; }
 .hero-image img {
+    padding: 6px; /* এটাই আপনার গ্রেডিয়েন্ট বর্ডারের সাইজ */
+    background: linear-gradient(135deg, #005b96, #00b4d8);
     width: 100%; max-width: 450px; border-radius: 30px;
     border: 8px solid #fff; box-shadow: var(--shadow-soft);
 }
