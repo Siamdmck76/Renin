@@ -264,6 +264,13 @@ footer p { font-size: 0.9rem; }
     .name-title { font-size: 3rem; }
     .courses-grid, .features-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     
+    /* --- Contact Info Fix for Mobile (এখানে আইকন ঠিক করা হয়েছে) --- */
+    .info-item { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 12px; 
+    }
+    
     /* Mobile Navigation Setup */
     .menu-toggle { display: block; }
     
