@@ -354,3 +354,49 @@ footer p { font-size: 0.9rem; }
         font-size: 1.25rem !important;
     }
 }
+/* --- RENIN Custom Header Logo Size --- */
+.custom-logo {
+    height: 40px; /* লোগোটি বেশি বড় বা ছোট মনে হলে এই সাইজটি পরিবর্তন করতে পারেন */
+    width: auto; 
+    margin-right: 8px; /* লোগো এবং RENIN লেখার মাঝখানে একটু গ্যাপ */
+    vertical-align: middle; /* লোগো এবং লেখা একদম এক লাইনে রাখার জন্য */
+}
+/* =========================================
+   RENIN Heading Animation CSS
+========================================= */
+
+/* ১. মেইন কি-ফ্রেম (নিচ থেকে ভেসে ওঠার জন্য) */
+@keyframes fadeInUpHeading {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* ৩০ পিক্সেল নিচ থেকে শুরু হবে */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* আসল জায়গায় বসে যাবে */
+    }
+}
+
+/* ২. প্রথম লাইনের অ্যানিমেশন */
+.name-title .animate-line-1 {
+    display: inline-block; /* transform কাজ করার জন্য */
+    opacity: 0; /* শুরুতে অদৃশ্য থাকবে */
+    animation: fadeInUpHeading 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* ০.২ সেকেন্ড পর শুরু হবে */
+}
+
+/* ৩. দ্বিতীয় লাইনের অ্যানিমেশন */
+.name-title .animate-line-2 {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUpHeading 0.8s ease-out forwards;
+    animation-delay: 0.6s; /* প্রথম লাইন আসার ০.৪ সেকেন্ড পর এটি আসবে */
+}
+
+/* ৪. মোবাইল ভিউয়ের জন্য একটু দ্রুত অ্যানিমেশন */
+@media (max-width: 768px) {
+    .name-title .animate-line-1,
+    .name-title .animate-line-2 {
+        animation-duration: 0.6s; 
+    }
+}
